@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
 import { Col } from 'antd';
 import { WrapperAccountHeader, WrapperHeader, WrapperTextHeader, WrapperTextHeaderSmall } from "./style";
-import { Input } from 'antd';
 import { FaAngleDown, FaRegUser, FaCartPlus  } from "react-icons/fa";
+import ButtonInputSearch from "../components/ButtonInputSearch/ButtonInputSearch";
 
-const { Search } = Input;
+
 
 
 const LayoutDefault = () => {
@@ -14,12 +14,7 @@ const LayoutDefault = () => {
                 <WrapperHeader gutter={16}>
                     <Col span={6}><WrapperTextHeader>SUPPER MART</WrapperTextHeader></Col>
                     <Col span={12}>
-                    <Search
-                        placeholder="input search text"
-                        allowClear
-                        enterButton="Tìm kiếm"
-                        size="large"
-                    />
+                        <ButtonInputSearch />
                     </Col>
                     <Col span={6} style={{display: "flex", gap:"20px", alignItems: "center"}}>
                         <WrapperAccountHeader>
